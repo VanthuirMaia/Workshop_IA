@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop: Inteligência Artificial e ChatGPT</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Botão de Acessibilidade -->
+    <div class="accessibility-toolbar">
+        <button id="vlibras-btn" class="accessibility-btn" title="Traduzir para Libras">
+            <i class="fas fa-hands"></i>
+            <span>Libras</span>
+        </button>
+        <button id="font-size-btn" class="accessibility-btn" title="Aumentar fonte">
+            <i class="fas fa-text-height"></i>
+            <span>A+</span>
+        </button>
+        <button id="high-contrast-btn" class="accessibility-btn" title="Alto contraste">
+            <i class="fas fa-adjust"></i>
+            <span>Contraste</span>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-robot"></i>
+                    <h1>Workshop IA</h1>
+                </div>
+                <nav class="nav">
+                    <a href="#inicio" class="nav-link active">Início</a>
+                    <a href="#conceitos" class="nav-link">Conceitos</a>
+                    <a href="#atividades" class="nav-link">Atividades</a>
+                    <a href="#inclusao" class="nav-link">Inclusão</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="hero-title">Workshop: Inteligência Artificial</h2>
+                    <p class="hero-subtitle">Descobrindo como a IA pode transformar nosso dia a dia</p>
+                    <div class="hero-badges">
+                        <span class="badge">ChatGPT</span>
+                        <span class="badge">Acessível</span>
+                        <span class="badge">Interativo</span>
+                    </div>
+                    <button class="cta-button" onclick="scrollToSection('conceitos')">
+                        <i class="fas fa-play"></i>
+                        Começar Workshop
+                    </button>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image">
+                        <img src="images/ai-brain.jpg" alt="Cérebro artificial representando inteligência artificial" class="hero-img">
+                        <div class="ai-animation">
+                            <div class="ai-circle"></div>
+                            <div class="ai-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conceitos Section -->
+    <section id="conceitos" class="concepts">
+        <div class="container">
+            <h2 class="section-title">Conceitos Fundamentais</h2>
+            
+            <div class="concept-grid">
+                <div class="concept-card" data-concept="ia">
+                    <div class="concept-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>O que é IA?</h3>
+                    <p>Sistemas que aprendem com dados e executam tarefas que normalmente exigem inteligência humana.</p>
+                    <div class="examples">
+                        <span class="example-tag">Netflix</span>
+                        <span class="example-tag">WhatsApp</span>
+                        <span class="example-tag">Alexa</span>
+                    </div>
+                </div>
+
+                <div class="concept-card" data-concept="llm">
+                    <div class="concept-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Modelo de Linguagem (LLM)</h3>
+                    <p>Como um "cérebro artificial" treinado para entender e gerar textos baseado em padrões da linguagem.</p>
+                    <div class="highlight">Large Language Model</div>
+                </div>
+
+                <div class="concept-card" data-concept="chatgpt">
+                    <div class="concept-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>ChatGPT</h3>
+                    <p>Uma tecnologia que conversa com você, entende perguntas e gera respostas baseadas em padrões aprendidos.</p>
+                    <div class="highlight">Conversa Natural</div>
+                </div>
+
+                <div class="concept-card" data-concept="funcionamento">
+                    <div class="concept-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Como Funciona?</h3>
+                    <p>Treinado em bilhões de textos da internet, livros e artigos. Não pensa, apenas gera respostas baseadas em padrões.</p>
+                    <div class="highlight">Padrões de Texto</div>
+                </div>
+            </div>
+
+            <!-- Limitações -->
+            <div class="limitations-section">
+                <h3 class="limitations-title">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Limitações Importantes
+                </h3>
+                <div class="limitations-grid">
+                    <div class="limitation-item">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Pode errar ou inventar informações (alucinação)</span>
+                    </div>
+                    <div class="limitation-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Não entende sentimentos de verdade, apenas padrões</span>
+                    </div>
+                    <div class="limitation-item">
+                        <i class="fas fa-search"></i>
+                        <span>Depende da qualidade da pergunta (prompt)</span>
+                    </div>
+                </div>
+                <div class="warning-message">
+                    "Nem tudo que ele diz é verdade."
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Atividades Section -->
+    <section id="atividades" class="activities">
+        <div class="container">
+            <h2 class="section-title">Atividade Interativa</h2>
+            
+            <div class="activity-intro">
+                <p>Escolha um tema e explore como a IA pode ajudar no mercado de trabalho:</p>
+            </div>
+
+            <div class="themes-grid">
+                <div class="theme-card" data-theme="comunicacao">
+                    <div class="theme-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Comunicação</h3>
+                    <p>E-mails, mensagens profissionais, apresentações</p>
+                    <button class="theme-btn">Explorar</button>
+                </div>
+
+                <div class="theme-card" data-theme="gestao">
+                    <div class="theme-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Gestão</h3>
+                    <p>Análise de dados, relatórios, tomada de decisão</p>
+                    <button class="theme-btn">Explorar</button>
+                </div>
+
+                <div class="theme-card" data-theme="carreira">
+                    <div class="theme-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Carreira</h3>
+                    <p>Currículo, entrevistas, aprendizado</p>
+                    <button class="theme-btn">Explorar</button>
+                </div>
+
+                <div class="theme-card" data-theme="educacao">
+                    <div class="theme-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Educação</h3>
+                    <p>Explicações, planos de estudo, conceitos</p>
+                    <button class="theme-btn">Explorar</button>
+                </div>
+            </div>
+
+            <!-- Exemplos -->
+            <div class="examples-section">
+                <h3>Exemplos Práticos</h3>
+                <div class="example-tabs">
+                    <button class="tab-btn active" data-tab="exemplo1">Exemplo 1: E-mail de Cobrança</button>
+                    <button class="tab-btn" data-tab="exemplo2">Exemplo 2: Currículo para Analista</button>
+                </div>
+
+                <div class="tab-content active" id="exemplo1">
+                    <div class="example-content">
+                        <div class="example-question">
+                            <h4>Pergunta:</h4>
+                            <p>"Como escrever um e-mail para cobrar um cliente de forma educada?"</p>
+                        </div>
+                        <div class="example-response">
+                            <h4>Resposta do ChatGPT:</h4>
+                            <div class="response-box">
+                                <p><strong>Assunto:</strong> Lembrete de pagamento</p>
+                                <p>Olá [Nome do Cliente], espero que esteja bem. Verificamos que o pagamento referente à fatura nº 123 continua em aberto. Gostaríamos de saber se houve algum imprevisto ou se precisa de apoio para concluir o processo. Agradecemos sua atenção e permanecemos à disposição.</p>
+                                <p><strong>Atenciosamente,</strong><br>[Seu Nome]</p>
+                            </div>
+                        </div>
+                        <div class="evaluation-criteria">
+                            <h4>Avaliação:</h4>
+                            <div class="criteria-grid">
+                                <div class="criteria-item good">
+                                    <i class="fas fa-check"></i>
+                                    <span><strong>Utilidade:</strong> Estrutura um e-mail profissional</span>
+                                </div>
+                                <div class="criteria-item good">
+                                    <i class="fas fa-check"></i>
+                                    <span><strong>Clareza:</strong> Texto claro e objetivo</span>
+                                </div>
+                                <div class="criteria-item improve">
+                                    <i class="fas fa-exclamation"></i>
+                                    <span><strong>Melhoria:</strong> Poderia incluir prazo final</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="exemplo2">
+                    <div class="example-content">
+                        <div class="example-question">
+                            <h4>Pergunta:</h4>
+                            <p>"Quais pontos devo destacar no meu currículo para uma vaga de analista de dados júnior?"</p>
+                        </div>
+                        <div class="example-response">
+                            <h4>Resposta do ChatGPT:</h4>
+                            <div class="response-box">
+                                <p>Para uma vaga de Analista de Dados Júnior, destaque:</p>
+                                <ul>
+                                    <li><strong>Conhecimentos técnicos:</strong> SQL, Excel, Python, Power BI</li>
+                                    <li><strong>Projetos práticos</strong> (mesmo acadêmicos ou pessoais)</li>
+                                    <li><strong>Habilidade</strong> em interpretar dados para apoiar decisões</li>
+                                    <li><strong>Comunicação clara</strong> ao apresentar insights</li>
+                                    <li><strong>Interesse</strong> em aprender e evoluir na área</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="evaluation-criteria">
+                            <h4>Avaliação:</h4>
+                            <div class="criteria-grid">
+                                <div class="criteria-item good">
+                                    <i class="fas fa-check"></i>
+                                    <span><strong>Utilidade:</strong> Direções claras para o currículo</span>
+                                </div>
+                                <div class="criteria-item good">
+                                    <i class="fas fa-check"></i>
+                                    <span><strong>Aplicação:</strong> Direto para quem busca emprego</span>
+                                </div>
+                                <div class="criteria-item improve">
+                                    <i class="fas fa-exclamation"></i>
+                                    <span><strong>Melhoria:</strong> Poderia sugerir exemplos de métricas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inclusão Section -->
+    <section id="inclusao" class="inclusion">
+        <div class="container">
+            <h2 class="section-title">IA e Inclusão</h2>
+            
+            <div class="inclusion-intro">
+                <p>Como o ChatGPT pode apoiar a comunidade surda:</p>
+            </div>
+
+            <div class="inclusion-grid">
+                <div class="inclusion-card">
+                    <div class="inclusion-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Textos Claros</h3>
+                    <p>Geração de textos claros e resumidos, adaptados para melhor compreensão.</p>
+                </div>
+
+                <div class="inclusion-card">
+                    <div class="inclusion-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Apoio no Aprendizado</h3>
+                    <p>Português escrito em linguagem mais acessível e didática.</p>
+                </div>
+
+                <div class="inclusion-card">
+                    <div class="inclusion-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h3>Materiais Visuais</h3>
+                    <p>Criação de materiais visuais e acessíveis, resumos e roteiros para vídeos em Libras.</p>
+                </div>
+
+                <div class="inclusion-card">
+                    <div class="inclusion-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Tradução Simplificada</h3>
+                    <p>Ferramenta de tradução e simplificação de textos complexos.</p>
+                </div>
+            </div>
+
+            <div class="conclusion">
+                <div class="conclusion-content">
+                    <h3>Conclusão</h3>
+                    <p class="conclusion-text">A IA é ferramenta, não substituto da inteligência humana.</p>
+                    <blockquote>
+                        "Com consciência e criatividade, a IA pode ser um aliado para inclusão e desenvolvimento."
+                    </blockquote>
+                </div>
+            </div>
+
+            <!-- QR Code Section -->
+            <div class="qr-section">
+                <div class="qr-content">
+                    <div class="qr-text">
+                        <h3>Acesse este Folder</h3>
+                        <p>Escaneie o QR Code para acessar este conteúdo em qualquer dispositivo</p>
+                        <div class="qr-features">
+                            <span class="qr-feature">
+                                <i class="fas fa-mobile-alt"></i>
+                                Responsivo
+                            </span>
+                            <span class="qr-feature">
+                                <i class="fas fa-universal-access"></i>
+                                Acessível
+                            </span>
+                            <span class="qr-feature">
+                                <i class="fas fa-hands"></i>
+                                Libras
+                            </span>
+                        </div>
+                    </div>
+                    <div class="qr-image">
+                        <img src="images/qr-code-folder.jpg" alt="QR Code para acessar o folder interativo" class="qr-code">
+                        <p class="qr-caption">Folder Interativo - Workshop IA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>Workshop IA - Vanthuir Maia</h4>
+                    <p>Analista e Engenheiro de Dados, Pesquisador em IA e ML</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#inicio">Início</a>
+                    <a href="#conceitos">Conceitos</a>
+                    <a href="#atividades">Atividades</a>
+                    <a href="#inclusao">Inclusão</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- VLibras Widget -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+
